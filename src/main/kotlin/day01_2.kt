@@ -1,16 +1,14 @@
 
-import kotlin.math.abs
-
 fun main() {
 
     val inLines = readInput("input01_1")
     //val inLines = readInput("test01_1")
 
     var rep = 0L
-    var leftL = mutableListOf<Int>()
-    var rightL = mutableListOf<Int>()
+    val leftL = mutableListOf<Int>()
+    val rightL = mutableListOf<Int>()
 
-    var patLine ="(\\d+)   (\\d+)".toRegex()
+    val patLine ="(\\d+) {3}(\\d+)".toRegex()
 
     inLines.forEach {
         val line = it
@@ -23,7 +21,7 @@ fun main() {
         }
     }
 
-    for (i in 0 until inLines.size) {
+    for (i in inLines.indices) {
         val vL = leftL[i]
         val nbV = rightL.count { it == vL }
         rep += vL * nbV
