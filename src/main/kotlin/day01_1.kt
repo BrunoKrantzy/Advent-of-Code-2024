@@ -6,10 +6,10 @@ fun main() {
     //val inLines = readInput("test01_1")
 
     var rep = 0L
-    var leftL = mutableListOf<Int>()
-    var rightL = mutableListOf<Int>()
+    val leftL = mutableListOf<Int>()
+    val rightL = mutableListOf<Int>()
 
-    var patLine ="(\\d+)   (\\d+)".toRegex()
+    val patLine ="(\\d+) {3}(\\d+)".toRegex()
 
     inLines.forEach {
         val line = it
@@ -25,7 +25,7 @@ fun main() {
     leftL.sort()
     rightL.sort()
 
-    for (i in 0 until inLines.size) {
+    for (i in inLines.indices) {
         rep += abs(leftL[i] - rightL[i])
     }
 
