@@ -16,8 +16,8 @@ fun rule1 (num:Long) : MutableList<Long> {
 
 fun main() {
 
-    //val inLines = readInput("input11_1")
-    val inLines = readInput("test11_1")
+    val inLines = readInput("input11_1")
+    //val inLines = readInput("test11_1")
 
     val blink = 25
 
