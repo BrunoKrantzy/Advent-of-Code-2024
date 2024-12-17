@@ -1,5 +1,5 @@
 
-enum class DirRobot {  U, D, L, R }
+enum class DirRobot { U, D, L, R }
 
 fun main() {
 
