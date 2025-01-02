@@ -36,13 +36,13 @@ fun main() {
         }
 
         // fab du pattern pour le regex
-        val pattern = StringBuilder()
+        var pattern = StringBuilder()
         pattern.append("(")
-        setMotsAvecPattern.forEach {
+        setMotsAvecPattern.forEachIndexed { idx, it ->
             pattern.append(it)
-            pattern.append("|")
+            if (idx < setMotsAvecPattern.size-1)
+                pattern.append("|")
         }
-        pattern.dropLast(1)
         pattern.append(")*")
 
         // test du design
